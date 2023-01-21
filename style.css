@@ -1,0 +1,861 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: linear 0.3s;
+}
+body{
+    overflow-x: hidden;
+}
+
+#header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1vw 10vw;
+    width: 100vw;
+    position: sticky;
+    top: 0; 
+    box-shadow: none;
+    background-color: rgba(255, 255, 255, 0.893);
+    z-index: 2;
+}
+nav ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+}
+nav ul li a{
+    font-family: 'Rubik', sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    text-transform:  uppercase;
+    text-decoration: none;
+    margin-right: 50px;
+    letter-spacing: 1px;
+    color: black;
+    padding: 5px 10px;
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+    border-bottom: 2px solid rgba(255, 255, 255, 0);
+}
+
+nav ul li a:hover{
+    border-bottom: 2px solid rgb(82, 65, 236);
+    color: rgb(82, 65, 236);
+    border-radius: 5px;
+ }
+
+  /***************     Anchor Hover Effect      *************************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/************   HUMBURGER MENU   ***************************/
+
+.humburger{
+    display: none;
+}
+
+@media screen and (max-width:950px){
+    .humburger{
+        display: block;
+    }
+    nav{
+        display: none;
+    }
+    #header{
+        padding: 15px 3vw;
+    }
+    .fa-bars{
+        font-size: 30px;
+        color: black;
+    }
+    .menu_box{
+        width: 100vw;
+        height: 100vh;
+        background: linear-gradient(to top left, rgb(37, 123, 229),rgb(166, 29, 230));
+        position: absolute;
+        top: 50px;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+        z-index: 2;
+        transform: translateX(-100vw);
+        transition: transform 1s;
+        opacity: 0;
+    }
+    .menu_box.open-menu{
+        display: flex;
+        opacity: 1;
+        transform: translateX(-1vw);
+        transition: transform 1s;
+    }
+    .menu_box a{
+        margin-top: 50px;
+        color: white;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 20px;
+        letter-spacing: 0.5px
+    }
+}
+
+
+
+
+/********************     First Page     ************************/
+
+#first-page{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-top: 15vh;    
+}
+.first_page_content{
+    padding-left: 10vw;
+    padding-top: 17vh; 
+    background: linear-gradient(to top,rgba(255, 255, 255, 0.938), rgba(255, 255, 255, 0.884) ), url(bg-img.jpg) no-repeat;
+    background-size:contain;
+    background-position: 0 50px;
+}
+.first_page_content h2{
+    font-size: 40px;
+    font-family: 'Rubik', sans-serif;
+}
+.first_page_content h1{
+    font-size: 62px;
+    font-family: 'Rubik', sans-serif;
+    line-height: 100px;
+}
+/*************** Typing Text   **************/
+
+.blink {
+    animation: blink 0.5s infinite;
+}
+@keyframes blink{
+    to { opacity: .0; }
+}
+.header-sub-title {
+    color: rgb(0, 0, 0);
+    font-family: "Courier";
+    font-size: 20px;
+    padding: 0.1em;
+}
+#word{
+    font-size: 30px;
+    font-family: 'Rubik', sans-serif;
+    color: rgb(118, 46, 225);
+    font-weight: bold;
+}
+
+/*************** Typing Text   **************/
+
+
+#hire_me, #get_cv{
+    font-family: 'Rubik', sans-serif;
+    text-decoration: none;
+}
+#hire_me{
+    font-family: 'Rubik', sans-serif;
+    text-decoration: none;
+    background: linear-gradient(to left, rgb(58, 114, 255),rgb(175, 70, 255));
+    padding: 15px 0;
+    width: 140px;
+    font-size: 14px;
+    text-align: center;
+    color: white;
+    border: 2px solid white;
+    border-radius: 5px;
+    margin-top: 30px;
+    letter-spacing: 0.5px;
+    font-weight: bold;
+}
+#hire_me:hover{
+    color: black;
+    border: 2px solid rgb(94, 65, 225);
+    background: white;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+
+}
+#get_cv{
+    font-family: 'Rubik', sans-serif;
+    text-decoration: none;
+    padding: 15px 0;
+    width: 140px;
+    text-align: center;
+    font-size: 14px;
+    text-align: center;
+    color: black;
+    border: 2px solid rgb(94, 65, 225);
+    background: white;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 30px;
+    margin-left: 20px;
+    letter-spacing: 0.5px;
+}
+#get_cv:hover{
+    background: linear-gradient(to left, rgb(57, 113, 255),rgb(168, 62, 249));
+    color: white;
+    border: 2px solid white;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}
+
+/**************    RESPONSIVE   **********************************************************/
+/* Home Image */
+@media screen and (max-width:1200px){
+    #home_image{
+        height: 50vh;
+    }
+    .first_page_content{
+        padding-top: 5vh; 
+    }
+}
+
+@media screen and (max-width:950px){
+    #first-page{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 10px;
+    }
+    #home_image{
+        height: 85vw;
+        padding: 10px 10vw;
+    }
+    
+.first_page_content{
+    padding: 0 10px; 
+    background: linear-gradient(to top,rgba(255, 255, 255, 0.938), rgba(255, 255, 255, 0.884) ), url(bg-img.jpg) no-repeat;
+    background-size: contain;
+    background-position: bottom;
+}
+.first_page_content h1{
+    font-size: 30px;
+    font-family: 'Rubik', sans-serif;
+    line-height: 80px;
+}
+.first_page_content h2{
+    font-size: 30px;
+    font-family: 'Rubik', sans-serif;
+}
+#word{
+    font-size: 7vw;
+    color: rgb(118, 46, 225);
+    font-family: 'Rubik', sans-serif;
+}
+}
+
+
+
+
+
+/* ***************************  About PAGE    **************************************************************** */
+
+.about_heading{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#about_img{
+    height: 26vw;
+    border-radius: 10px;
+    box-shadow: rgba(46, 149, 240, 0.4) 5px 5px, rgba(46, 101, 240, 0.3) 10px 10px, rgba(46, 133, 240, 0.2) 15px 15px, rgba(46, 78, 240, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
+}
+
+.about_page{
+    padding: 50px 10vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.about_content{
+    width: 60%;
+}
+.about_content p{
+    font-family: 'Rubik', sans-serif;
+    font-size: 17px;
+    color: rgb(91, 91, 91);
+    letter-spacing: 0.5px;
+    line-height: 25px;
+}
+
+.education{
+    margin-top: 50px;
+}
+
+.edu_content{
+    margin-left: 25px;
+}
+#edu_line{
+    height: 50px;width: 4px;background-color: rgb(68, 113, 248);position: relative;right: -30px;
+}
+
+
+
+
+@media screen and (max-width:900px){
+.about_heading{
+    margin-top: 50px;
+}
+#about_img{
+    height: 70vw;
+}
+
+.about_page{
+    padding: 50px 1vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.about_content{
+    width: 90%;
+    margin-top: 20px;
+}
+.about_content p{
+    font-family: 'Rubik', sans-serif;
+    font-size: 16px;
+    color: rgb(91, 91, 91);
+    letter-spacing: 0.5px;
+    line-height: 25px;
+}
+.edu_content{
+    margin-left: 20px;
+}
+#edu_line{
+    height: 50px;width: 4px;background-color: rgb(68, 113, 248);position: relative;right: -30px;
+}
+
+.education{
+    margin-top: 50px;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/********************      Services      ********************************************************/
+
+.services_heading{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 0;
+    background-color: rgba(140, 190, 255, 0.1);
+    margin-top: 20px;
+}
+.services{
+    padding: 20px 10vw 100px 10vw;
+    background-color: rgba(140, 190, 255, 0.100);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.service-item{
+    width: 265px;
+    height: 210px;
+    text-align: center;
+    padding: 20px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    border-radius: 10px;
+}
+.service-item:hover{
+    transform: scale(1.1,1.1);
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+#service_name{
+    font-size: 18px;
+    color: black;
+    margin-top: 10px;
+}
+.service-item i{
+    color: rgb(68, 79, 230);
+    font-size: 35px;
+}
+.service-item p{
+    font-family: 'Rubik', sans-serif;
+    color: rgb(69, 69, 69);
+    letter-spacing: 0.5px;
+    font-size: 14.5px;
+    line-height: 23px;
+}
+
+
+@media screen and (max-width:950px){
+.services_heading{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 0;
+    background-color: rgba(140, 190, 255, 0.1);
+    margin-top: 20px;
+}
+    .services{
+        padding: 0 10vw 50px 10vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .service-item{
+        margin-top: 20px;
+    }
+    .service-item p{
+        font-family: 'Rubik', sans-serif;
+        color: rgb(69, 69, 69);
+        letter-spacing: 0.5px;
+        font-size: 14px;
+        line-height: 23px;
+    }
+}
+
+
+
+
+
+
+
+
+/*****************  MY SKILLS   *****************************************/
+.skill_heading{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 0;
+    margin-top: 20px;
+}
+.skills{
+    padding: 0 10vw 50px 10vw;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-row-gap: 40px;
+    justify-content: space-evenly;
+}
+.skill-item{
+    width: 35vw;
+    border-radius: 5px;
+    padding: 15px;
+    box-shadow: rgba(0, 0, 0, 0.1)  1px 5px 5px;
+}
+.skill-item i{
+    font-size: 20px;
+}
+.skill-item span{
+    font-family: 'Rubik', sans-serif;
+    margin-left: 10px;
+    font-weight: bold;
+    color: rgb(39, 39, 39);
+}
+
+
+@media screen and (max-width:950px){
+    .skills{
+        padding: 0 10px 50px 10px;
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-row-gap: 30px;
+        justify-content: space-around;
+    }
+    .skill-item{
+        width: 45vw;
+        border-radius: 5px;
+        padding: 10px;
+        box-shadow: rgba(0, 0, 0, 0.170) 0px 4px 1px;
+    }
+}
+
+
+
+
+
+
+
+
+/*********************      Projects     **********************************/
+
+.projects_heading{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 0;
+    margin-top: 20px;
+}
+.projects{
+    width: 80%;
+    height: 70vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: auto;
+    box-shadow: 0px 1px 10px 1px rgb(214, 214, 214);
+    border-radius: 15px;
+}
+.project-slider{
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+.projects button{
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    font-size: 40px;
+    color: rgb(69, 115, 255);
+    padding: 30px;
+}
+.projects button:hover{
+    cursor: pointer;
+}
+.projects .project-slider .slide{
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+/**********************    Insivisual Slide   *********************/
+#first_slide{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+#project_img{
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+}
+#laptop{
+    width: 80%;
+}
+#phone{
+    width: 25%;
+    border-radius: 15px;
+}
+.project_content{
+    width: 50%;
+}
+.project_name{
+    font-family: 'Rubik', sans-serif;
+    font-size: 24px;
+    line-height: 35px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+.project_des{
+    font-family: 'Rubik', sans-serif;
+    font-size: 15px;
+    color: rgba(89, 89, 89, 0.785);
+    line-height: 25px;
+    margin-top: 10px;
+}
+#visit-site{
+    background-color: white;
+    font-size: 14px;
+    font-family: 'Rubik', sans-serif;
+    font-weight: bold;
+    color: rgb(114, 75, 255);
+    border: 1px solid rgb(114, 75, 255);
+    border-radius: 30px;
+    padding: 15px 20px;
+    letter-spacing: 0.5px;
+    margin-top: 20px;
+}
+#visit-site:hover{
+    background-color: rgb(97, 75, 243);
+    color: aliceblue;
+}
+
+
+@media screen and (max-width:950px){
+    #first_slide{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        padding: 30px 20px;
+    }
+    #project_img{
+        width: 80%;
+    }
+    #laptop{
+        width: 80%;
+    }
+    #phone{
+        width: 25%;
+        border-radius: 15px;
+    }
+    .project_content{
+        width: 100%;
+    }
+    .project_des{
+        font-family: 'Rubik', sans-serif;
+        font-size: 15px;
+    }
+}
+@media screen and (max-width:600px){
+    #first_slide{
+        padding: 30px 15px;
+    }
+    .projects button{
+        font-size: 30px;
+        color: rgb(114, 87, 245);
+        padding: 5px;
+    }
+    .projects{
+        width: 90%;
+        height: 550px;
+    }
+    #project_img{
+        width: 100%;
+    }
+    #phone{
+        border-radius: 8px;
+    }
+    .project_content{
+        width: 100%;
+        text-align: center;
+    }
+}
+
+
+
+
+
+
+/*********************  Contact Me   ************************************************/
+
+.contact{
+    margin-top: 50px;
+    padding: 50px 10vw;
+    background-color: rgba(140, 190, 255, 0.100);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+.contact .connect_me{
+    text-align: center;
+    width: 50%;
+}
+.contact .contact_heading{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 0;
+    margin-top: 20px;
+}
+#connect{
+    background-color: rgb(108, 86, 247);
+    font-size: 13.5px;
+    font-family: 'Rubik', sans-serif;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    border: 1px solid rgb(121, 87, 243);
+    border-radius: 30px;
+    padding: 15px 20px;
+    letter-spacing: 1px;
+    margin-top: 20px;
+}
+#connect:hover{
+    background-color: white;
+    color: rgb(127, 94, 249);
+    cursor: pointer;
+}
+.contact .social_media{
+    width: 50%;
+}
+
+
+@media screen and (max-width:950px){
+    
+.contact{
+    margin-top: 50px;
+    padding: 20px 5vw 5vw 50px;
+    background-color: rgba(140, 190, 255, 0.100);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.contact .connect_me{
+        text-align: center;
+        width: 100%;
+}
+.contact .social_media{
+        width: 100%;
+        margin-top: 10px;
+}
+    
+}
+
+/*********************  Contact  Form   ************************************************/
+
+
+#contact_form{
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    z-index: 1;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.425);
+    display: none;
+    align-items: center;
+    justify-content: center;
+}      
+#contact_form form {
+    width: 600px;
+    height: 500px;
+    background-color: rgba(255, 255, 255, 0.947);
+    border-radius: 10px;
+    box-shadow: rgba(53, 53, 107, 0.374) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    padding: 30px 50px;
+    text-align: center;
+    position: relative;
+}
+#contact_form form #close{
+    position: absolute;
+    color: black;
+    right: 15px;
+    top: 15px;
+    font-size: 22px;
+}
+#contact_form form #close:hover{
+    cursor: pointer;
+}
+#contact_form form h2{
+    font-family: 'Rubik', sans-serif;
+    margin-bottom: 15px;
+}
+#contact_form form input, #message{
+    font-family: 'Rubik', sans-serif;
+    background-color: rgba(180, 176, 176, 0.279);
+    padding: 13px 15px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    border-radius: 7px;
+    width: 100%;
+    margin-top: 20px;
+    box-shadow: rgba(0, 0, 0, 0.219) 2.4px 2.4px 3.2px;
+}
+#contact_form form #submit{
+    width: 100%;
+    padding: 13px 15px;
+    background-color: rgb(115, 91, 239);
+    color: aliceblue;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 7px;
+}
+
+
+@media screen and (max-width:950px){
+#contact_form{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.425);
+    display: none;
+    align-items: center;
+    justify-content: center;
+}      
+#contact_form form{
+    width: 335px;
+    height: 480px;
+    padding: 15px 15px;
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*********************  Contact Form   ************************************************/
+
+
+/*********************  Contact Me   ************************************************/
+
+
+
+
+.copy_right{
+    background-color: rgb(110, 87, 241);
+    text-align: center;
+    padding: 10px;
+}
+.copy_right p{
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: white;
+    letter-spacing: 0.5px;
+}
+
+
+
